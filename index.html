@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>RPS</title>
+
+
+
+  	<!-- Links to Firebase -->
+	<script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
+
+    <script src="assets/javascript/config.js"></script>
+
+	<!-- Font Awesome Link -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+
+
+    <!-- Link to the Bootstrap Library -->
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<!-- Links to an dditional CSS Stylesheet -->
+	<link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+	<!-- Overall Bootstrap Grid -->
+  	<div class="container">
+
+  		<!-- Jumbotron with Title -->
+	  	<div class="jumbotron">
+	      <h1 class="text-center"><strong>
+	      	<i class="far fa-hand-rock"></i> Rock 
+	      	<i class="far fa-hand-paper"></i> Paper 
+	      	<i class="far fa-hand-scissors"></i> Scissors: Versus!</strong></h1>
+	      <h2 class="text-center">Enter your name to start the game</h2>
+	    </div> <!-- End Jumbotron -->
+
+	    <!-- Player Name Section -->
+	    <div class="formPanel"> 
+        	<form id="name-form">
+          		<input type="text" id="name-input" placeholder="Your Name">
+          		<input id="add-name" type="submit" value="Submit">
+        	</form>
+      	</div> 
+        <!-- End Player Name Section  -->
+
+	   	<!-- Game Data Section -->
+		<div class="panel panel-default">
+		    <div class="row"> <!-- Game Data Row -->
+
+		    	<!-- Player 1 Section -->
+		        <div class="col-lg-4 col-md-4 col-sm-4">
+		            <div class="panel panel-default playerPanel" id="playerPanel1">
+		                <div class="panel-heading panelName">
+							<h3 class="panel-title text-center" id="playerOneName"></h3>
+						</div>
+
+		                <div class="panel-body panelOption text-center">
+		                	<div class="option"><i class="far fa-hand-rock"></i> Rock</div>
+
+		                </div>
+
+		                <div class="panel-body panelOption text-center">
+		                	<div class="option"><i class="far fa-hand-paper"></i> Paper</div>
+		                </div>
+
+		                <div class="panel-body panelOption text-center">
+		                	<div class="option"><i class="far fa-hand-scissors"></i> Scissors</div>
+		                </div>
+
+
+		                <div class="panel-body panelStats text-center">
+		                	<div class="stats" id="player1Stats"></div>
+		                </div>
+		            </div>
+		        </div> <!-- End Player 1 Section -->
+		        
+		        <!-- Game Outcome Section -->
+		        <div class="col-lg-4 col-md-4 col-sm-4">
+		            <div class="panel panel-default gamePanel">
+		            	<h3 class="panel-title text-center" id="waitingNotice"></h3>
+		            	<h3 class="panel-title text-center" id="roundOutcome">Rock-Paper-Scissors</h3>
+		            </div>
+		        </div> <!-- End Game Outcome Section -->
+		        
+		        <!-- Player 2 Section -->
+		        <div class="col-lg-4 col-md-4 col-sm-4">
+		            <div class="panel panel-default playerPanel" id="playerPanel2">
+		                <div class="panel-heading panelName">
+							<h3 class="panel-title text-center" id="playerTwoName"></h3>
+						</div>
+
+		                <div class="panel-body panelOption text-center">
+		                	<div class="option"><i class="far fa-hand-rock"></i> Rock</div>
+		                </div>
+
+		                <div class="panel-body panelOption text-center">
+		                	<div class="option"><i class="far fa-hand-paper"></i> Paper</div>
+		                </div>
+
+		                <div class="panel-body panelOption text-center">
+		                	<div class="option"><i class="far fa-hand-scissors"></i> Scissors</div>
+		                </div>
+
+
+		                <div class="panel-body panelStats text-center">
+		                	<div class="stats" id="player2Stats"></div>
+		                </div>
+		            </div>
+		        </div> <!-- End Player 2 Section -->
+		        
+		    </div> <!-- Game Data Row -->
+		</div> <!-- End Game Data Section  -->
+
+	    <!-- Chat Section -->
+
+		<div class="holder-messages">
+			<div id="chatDisplay"></div>
+			<form id="chat-form">
+				<input type="text" id="chat-input" placeholder="Type here to send a message...">
+				<input id="chat-send" type="submit" value="Send">
+			</form>
+		</div>
+
+
+	    <!-- Row containting the website footer -->
+	    <div class="row">
+
+	      <div id="footerSpacer">
+	      </div>
+
+	      <div class="footer navbar-fixed-bottom" id="footerPanel">
+	        <div class="copyright">
+	          Griffin Gaeth © 2018
+	        </div>
+	      </div>
+
+	    </div> <!-- End the footer row -->
+
+	</div> <!-- End Bootstrap Grid -->
+
+		<!-- Link to the jQuery Library -->
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<!-- Load the JavaScript application file -->
+	<script type="text/javascript" src="assets/javascript/javascript.js"></script>
+
+</body>
+</html>
